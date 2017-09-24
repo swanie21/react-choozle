@@ -33,6 +33,7 @@
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.6",
     "promise": "7.1.1",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dev-utils": "^3.0.2",
     "react-dom": "^15.6.1",
@@ -51,7 +52,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "lint": "./node_modules/.bin/eslint --ext .jsx --ext .js . ; exit 0"
   },
   "homepage": "http://swanie21.github.io/sass-css-modules-webpack",
   "jest": {

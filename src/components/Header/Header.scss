@@ -1,0 +1,16 @@
+@import '../../styles/_variables';
+
+.header {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  padding: 0 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.logo {
+  width: 100px;
+}

@@ -1,0 +1,21 @@
+// Color Palette
+$red: #ff694a;
+
+$green: #7cad42;
+
+$orange: #ff9523;
+
+$white: #FFF;
+
+$grey: #777;
+
+$black: #000;
+
+
+// Media query breakpoints
+
+$breakpoint-small: 320px;
+$breakpoint-medium: 770px;
+
+$S: 'min-width:' + $breakpoint-small;
+$M: 'min-width:' + $breakpoint-medium;

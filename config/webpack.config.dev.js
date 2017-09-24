@@ -1,6 +1,5 @@
 'use strict';
 
-const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -184,7 +183,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
+          fallback: 'style-loader',
           use: [
             {
               loader: 'css-loader',
@@ -193,14 +192,14 @@ module.exports = {
                 localIdentName: '[name]__[local]___[hash:base64:5]'
               }
             },
-          'postcss-loader'
+            'postcss-loader'
           ]
         })
       },
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
+          fallback: 'style-loader',
           use: [
             {
               loader: 'css-loader',
@@ -211,7 +210,7 @@ module.exports = {
                 localIdentName: '[name]__[local]___[hash:base64:5]'
               }
             },
-          'sass-loader'
+            'sass-loader'
           ]
         })
       },

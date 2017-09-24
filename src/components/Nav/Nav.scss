@@ -1,0 +1,43 @@
+@import '../../styles/_variables';
+@import '../../styles/_fonts';
+
+.menu {
+  display: flex;
+
+  &__list {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    &_item {
+      color: $grey;
+      font-family: $font-lato;
+      font-size: 13px;
+      line-height: 22px;
+      list-style: none;
+      margin: 0 15px;
+      position: relative;
+
+      &:before {
+        background: $green;
+        bottom: 0;
+        content: '';
+        height: 3px;
+        left: 0;
+        position: absolute;
+        right: 100%;
+        transition: right 0.3s ease-out;
+      }
+
+      &:hover, &:focus, &:active {
+        color: $black;
+        cursor: pointer;
+
+        &:before {
+          right: 40%;
+        }
+      }
+    }
+  }
+}
