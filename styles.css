@@ -1,0 +1,260 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);@import url(https://fonts.googleapis.com/css?family=Lato:400,700);@import url(https://fonts.googleapis.com/css?family=Lato:400,700);@import url(https://fonts.googleapis.com/css?family=Lato:400,700);@import url(https://fonts.googleapis.com/css?family=Lato:400,700);/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, section, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0; }
+
+sup {
+  font-weight: bold;
+  font-size: 50%;
+  line-height: 0;
+  position: relative;
+  top: -1em;
+  vertical-align: baseline; }
+.App__heroImage___2VV4X {
+  align-items: center;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, transparent 100%), url("https://choozle.com/img/homepage/homepage-hero-bg.jpg") no-repeat scroll center;
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  position: relative;
+  width: 100%; }
+  @media screen and (min-width: 1025px) {
+    .App__heroImage___2VV4X {
+      background-attachment: fixed; } }
+
+.App__form___jgLa4 {
+  margin-top: 60px; }
+  .App__form__title___2KRE0 {
+    color: #FFF;
+    font-family: "Lato", sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin: 20px 0;
+    text-align: center;
+    text-shadow: 3px 2px 8px #414042; }
+  .App__form__content___2CGMJ {
+    color: #FFF;
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    margin-top: 30px;
+    text-align: center; }
+    .App__form__content___2CGMJ span {
+      text-decoration: underline; }
+
+.App__banner___P9dUp {
+  align-items: center;
+  background-color: #7cad42;
+  display: flex;
+  height: 80px;
+  justify-content: center; }
+  .App__banner__title___3THsj {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.3em;
+    text-align: center; }
+    @media screen and (min-width: 1025px) {
+      .App__banner__title___3THsj {
+        font-size: 32px; } }
+
+.App__modal___1Lvjw {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .App__modal__content___3sfBl {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    line-height: 1.3em;
+    margin: 30px 0;
+    text-align: center; }
+
+.App__content___1xM1A {
+  height: 800px; }
+.Header__header___3bMN6 {
+  align-items: center;
+  background-color: #FFF;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  padding: 0 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 2; }
+
+.Header__logo___1AtfL {
+  width: 100px; }
+.Nav__menu___3F1Nu {
+  display: flex; }
+  .Nav__menu__list___39DtV {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%; }
+    .Nav__menu__list_item___13WR8 {
+      color: #777;
+      font-family: "Lato", sans-serif;
+      font-size: 13px;
+      line-height: 22px;
+      list-style: none;
+      margin: 0 15px;
+      position: relative; }
+      .Nav__menu__list_item___13WR8:before {
+        background: #7cad42;
+        bottom: 0;
+        content: '';
+        height: 3px;
+        left: 0;
+        position: absolute;
+        right: 100%;
+        transition: right 0.3s ease-out; }
+      .Nav__menu__list_item___13WR8:hover, .Nav__menu__list_item___13WR8:focus, .Nav__menu__list_item___13WR8:active {
+        color: #000;
+        cursor: pointer; }
+        .Nav__menu__list_item___13WR8:hover:before, .Nav__menu__list_item___13WR8:focus:before, .Nav__menu__list_item___13WR8:active:before {
+          right: 40%; }
+.Button__label___3xLD8 {
+  color: #777;
+  font-family: "Lato", sans-serif;
+  font-size: 13px; }
+
+.Button__red___3z8k5 {
+  background-color: #FFF;
+  border: 3px #ff694a solid;
+  border-radius: 5px;
+  margin: 0 20px 0 10px;
+  outline-color: #ffd3ca;
+  padding: 10px 0;
+  transition: background-color 0.5s;
+  width: 120px; }
+  .Button__red___3z8k5:hover, .Button__red___3z8k5:focus, .Button__red___3z8k5:active {
+    background-color: #ff694a;
+    cursor: pointer; }
+    .Button__red___3z8k5:hover .Button__label___3xLD8, .Button__red___3z8k5:focus .Button__label___3xLD8, .Button__red___3z8k5:active .Button__label___3xLD8 {
+      color: #FFF; }
+
+.Button__red-solid___KCk0D {
+  background-color: #ff694a;
+  border-radius: 5px;
+  border: none;
+  outline-color: #ffd3ca;
+  padding: 10px;
+  transition: background-color 0.5s; }
+  .Button__red-solid___KCk0D .Button__label___3xLD8 {
+    color: #FFF;
+    font-size: 20px; }
+  .Button__red-solid___KCk0D:hover, .Button__red-solid___KCk0D:focus, .Button__red-solid___KCk0D:active {
+    background-color: #ff4721;
+    cursor: pointer; }
+
+.Button__green___11Gs1 {
+  background-color: #FFF;
+  border: 3px #7cad42 solid;
+  border-radius: 5px;
+  outline-color: #bad797;
+  padding: 10px 0;
+  transition: background-color 0.5s;
+  width: 120px; }
+  .Button__green___11Gs1:hover, .Button__green___11Gs1:focus, .Button__green___11Gs1:active {
+    background-color: #7cad42;
+    cursor: pointer; }
+    .Button__green___11Gs1:hover .Button__label___3xLD8, .Button__green___11Gs1:focus .Button__label___3xLD8, .Button__green___11Gs1:active .Button__label___3xLD8 {
+      color: #FFF; }
+.Form__form___37Pls {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.Form__floatLabel___2h728 {
+  display: block;
+  margin-bottom: 10px;
+  position: relative; }
+  .Form__floatLabel___2h728 label, .Form__floatLabel___2h728 > span {
+    color: #777;
+    cursor: text;
+    font-size: 75%;
+    left: 0;
+    padding-top: 5px;
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    text-indent: 10px;
+    transition: all .2s; }
+  .Form__floatLabel___2h728 input {
+    border: none;
+    border-bottom: 2px #7cad42 solid;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 45px;
+    padding-top: 20px;
+    text-indent: 10px;
+    width: 300px; }
+    .Form__floatLabel___2h728 input::placeholder {
+      font-size: 14px;
+      opacity: 0;
+      transition: all .2s; }
+    .Form__floatLabel___2h728 input:placeholder-shown:not(:focus)::placeholder {
+      opacity: 0; }
+    .Form__floatLabel___2h728 input:placeholder-shown:not(:focus) + * {
+      font-size: 120%;
+      padding-top: 8px;
+      opacity: .7;
+      text-indent: 10px;
+      top: .25em; }
+    .Form__floatLabel___2h728 input:focus {
+      border-color: #628834;
+      outline: none; }
+
+/*# sourceMappingURL=styles.css.map*/
