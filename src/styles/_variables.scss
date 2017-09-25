@@ -16,6 +16,8 @@ $black: #000;
 
 $breakpoint-small: 320px;
 $breakpoint-medium: 770px;
+$breakpoint-large: 1025px;
 
 $S: 'min-width:' + $breakpoint-small;
 $M: 'min-width:' + $breakpoint-medium;
+$L: 'min-width:' + $breakpoint-large

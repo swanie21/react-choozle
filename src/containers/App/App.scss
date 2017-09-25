@@ -1,3 +1,36 @@
-.hero {
-  margin-top: 100px;
+@import '../../styles/_variables';
+
+.heroImage {
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%), url('https://choozle.com/img/homepage/homepage-hero-bg.jpg') no-repeat scroll center;
+  height: 600px;
+  position: relative;
+  width: 100%;
+
+  @media screen and ($L) {
+    background-attachment: fixed;
+  }
+}
+
+.banner {
+  align-items: center;
+  background-color: $green;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
+
+.bannerTitle {
+  color: $white;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.3em;
+  text-align: center;
+
+  @media screen and ($L) {
+    font-size: 32px;
+  }
+}
+
+.content {
+  height: 1000px;
 }
