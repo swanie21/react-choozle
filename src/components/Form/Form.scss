@@ -1,0 +1,78 @@
+@import '../../styles/_variables';
+@import '../../styles/_fonts';
+
+.form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// float-label-css bootstrap kit
+
+@mixin float-label {
+  label, > span {
+    color: $grey;
+    cursor: text;
+    font-size: 75%;
+    left: 0;
+    padding-top: 5px;
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    text-indent: 10px;
+    transition: all .2s;
+    @content;
+  }
+}
+
+@mixin float-label-input {
+  &::placeholder {
+    font-size: 14px;
+    opacity: 0;
+    transition: all .2s;
+  }
+
+  &:placeholder-shown:not(:focus)::placeholder {
+    opacity: 0;
+  }
+}
+
+@mixin float-label-scaled {
+  &:placeholder-shown:not(:focus) + * {
+    font-size: 120%;
+    padding-top: 8px;
+    opacity: .7;
+    text-indent: 10px;
+    @content;
+  }
+}
+
+.floatLabel {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+
+  @include float-label;
+
+  input {
+    @include float-label-input;
+    border: none;
+    border-bottom: 2px $green solid;
+    border-radius: 5px;
+    font-size: 18px;
+    height: 45px;
+    padding-top: 20px;
+    text-indent: 10px;
+    width: 300px;
+
+    @include float-label-scaled {
+      top: .25em;
+    }
+
+    &:focus {
+      border-color: darken($green, 10%);
+      outline: none;
+    }
+  }
+}
