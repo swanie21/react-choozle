@@ -1,13 +1,44 @@
 @import '../../styles/_variables';
+@import '../../styles/_fonts';
 
 .heroImage {
+  align-items: center;
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%), url('https://choozle.com/img/homepage/homepage-hero-bg.jpg') no-repeat scroll center;
+  display: flex;
   height: 600px;
+  justify-content: center;
   position: relative;
   width: 100%;
 
   @media screen and ($L) {
     background-attachment: fixed;
+  }
+}
+
+.form {
+  margin-top: 60px;
+
+  &__title {
+    color: $white;
+    font-family: $font-lato;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1.5em;
+    margin: 20px 0;
+    text-align: center;
+    text-shadow: 3px 2px 8px #414042;
+  }
+
+  &__content {
+    color: $white;
+    font-family: $font-lato;
+    font-size: 13px;
+    margin-top: 30px;
+    text-align: center;
+
+    span {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -17,20 +48,35 @@
   display: flex;
   height: 80px;
   justify-content: center;
+
+  &__title {
+    color: $white;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.3em;
+    text-align: center;
+
+    @media screen and ($L) {
+      font-size: 32px;
+    }
+  }
 }
 
-.bannerTitle {
-  color: $white;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1.3em;
-  text-align: center;
+.modal {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
-  @media screen and ($L) {
-    font-size: 32px;
+  &__content {
+    font-family: $font-lato;
+    font-size: 18px;
+    line-height: 1.3em;
+    margin: 30px 0;
+    text-align: center;
   }
 }
 
 .content {
-  height: 1000px;
+  height: 800px;
 }

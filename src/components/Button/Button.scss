@@ -9,10 +9,10 @@
 
 .red {
   background-color: $white;
-  border-color: $red;
+  border: 3px $red solid;
   border-radius: 5px;
-  border-style: solid;
   margin: 0 20px 0 10px;
+  outline-color: lighten($red, 25%);
   padding: 10px 0;
   transition: background-color 0.5s;
   width: 120px;
@@ -27,11 +27,30 @@
   }
 }
 
+.red-solid {
+  background-color: $red;
+  border-radius: 5px;
+  border: none;
+  outline-color: lighten($red, 25%);
+  padding: 10px;
+  transition: background-color 0.5s;
+
+  .label {
+    color: $white;
+    font-size: 20px;
+  }
+
+  &:hover, &:focus, &:active {
+    background-color: darken($red, 8%);
+    cursor: pointer;
+  }
+}
+
 .green {
   background-color: $white;
-  border-color: $green;
+  border: 3px $green solid;
   border-radius: 5px;
-  border-style: solid;
+  outline-color: lighten($green, 25%);
   padding: 10px 0;
   transition: background-color 0.5s;
   width: 120px;
