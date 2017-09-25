@@ -29,8 +29,8 @@
 
 .red-solid {
   background-color: $red;
-  border-radius: 5px;
   border: none;
+  border-radius: 5px;
   outline-color: lighten($red, 25%);
   padding: 10px;
   transition: background-color 0.5s;
