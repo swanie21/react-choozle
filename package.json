@@ -56,7 +56,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "lint": "./node_modules/.bin/eslint --ext .jsx --ext .js . ; exit 0"
   },
-  "homepage": "http://swanie21.github.io/sass-css-modules-webpack",
+  "homepage": "http://swanie21.github.io/react-choozle",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
