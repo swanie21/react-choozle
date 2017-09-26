@@ -132,7 +132,7 @@ sup {
   display: flex;
   height: 100px;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 20px 0 15px;
   position: fixed;
   width: 100%;
   z-index: 2; }
@@ -204,7 +204,7 @@ sup {
     padding: 50px;
     position: absolute;
     margin: 36px 0 0 -50px;
-    transform: translate(-100%, 0);
+    transform: translate(-200%, 0);
     transform-origin: 0% 0%;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     width: 290px; }
