@@ -21,12 +21,17 @@
   &__title {
     color: $white;
     font-family: $font-lato;
-    font-size: 38px;
+    font-size: 24px;
     font-weight: bold;
     line-height: 1.5em;
     margin: 20px 0;
+    padding: 0 10px;
     text-align: center;
     text-shadow: 3px 2px 8px #414042;
+
+    @media screen and ($M) {
+      font-size: 38px;
+    }
   }
 
   &__content {
@@ -65,8 +70,8 @@
 .modal {
   align-items: center;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
 
   &__content {
     font-family: $font-lato;

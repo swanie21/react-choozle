@@ -1,6 +1,17 @@
-# How to install Sass and CSS Modules into your Create React App
+# Choozle React Project
+
+Added new UI features to Choozle's website:
+* Float Labels
+* Hover States
+* Modal on form submittal
+* Responsive hamburger menu
+
+[Live Demo](http://kirstenswanson.io/react-choozle/)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+Added Sass and CSS Modules
 
 `npm run eject`  
 `yarn eject`
@@ -8,7 +19,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 `npm i sass-loader node-sass --save`  
 `yarn add sass-loader node-sass`
 
-Modify the `webpack.config.dev.js` file
+Modify the `webpack.config.dev.js` file  
+Modify the `webpack.config.prod.js` file
 
 ```
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -76,3 +88,11 @@ Create `postcss.config.js` file
 ```
 module.exports = { plugins: [require('autoprefixer')] };
 ```
+
+Added Typechecking with PropTypes  
+`npm install prop-types --save`
+
+Deployed to gh-pages  
+`npm run deploy`  
+
+[Live Demo](http://kirstenswanson.io/react-choozle/)

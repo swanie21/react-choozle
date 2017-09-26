@@ -6,7 +6,7 @@ import Nav from '../Nav/Nav';
 function Header () {
   return (
     <header className={ Styles.header } role='navigation'>
-      <img className={ Styles.logo } src={ logo } alt='logo' />
+      <img className={ Styles.header__logo } src={ logo } alt='logo' />
       <Nav />
     </header>
   );
