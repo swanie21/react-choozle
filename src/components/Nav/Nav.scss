@@ -1,23 +1,105 @@
 @import '../../styles/_variables';
 @import '../../styles/_fonts';
 
+// Desktop Menu
 .menu {
   display: flex;
 
-  &__list {
-    align-items: center;
+  &__desktop {
+    display: none;
+
+    @media screen and ($M) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &_list {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+
+      &_item {
+        color: $grey;
+        font-family: $font-lato;
+        font-size: 13px;
+        line-height: 22px;
+        list-style: none;
+        margin: 0 15px;
+        position: relative;
+
+        &:before {
+          background: $green;
+          bottom: 0;
+          content: '';
+          height: 3px;
+          left: 0;
+          position: absolute;
+          right: 100%;
+          transition: right 0.3s ease-out;
+        }
+
+        &:hover, &:focus, &:active {
+          color: $black;
+          cursor: pointer;
+
+          &:before {
+            right: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile Hamburger Menu
+.menu__mobile {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  @media screen and ($M) {
+    display: none;
+  }
+
+  &_input {
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    opacity: 0;
+    position: absolute;
+    width: 40px;
+    z-index: 2;
+
+    &:checked ~ ul {
+      opacity: 1;
+      transform: scale(1.0, 1.0);
+    }
+  }
+
+  &_list {
+    background: $off-white;
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    left: -300px;
+    padding: 50px;
+    position: absolute;
+    margin: 36px 0 0 -50px;
+    transform: translate(-100%, 0);
+    transform-origin: 0% 0%;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    width: 290px;
 
     &_item {
       color: $grey;
       font-family: $font-lato;
-      font-size: 13px;
+      font-size: 14px;
       line-height: 22px;
-      list-style: none;
-      margin: 0 15px;
+      margin-left: 50px;
       position: relative;
+      margin-bottom: 20px;
+
 
       &:before {
         background: $green;
@@ -35,9 +117,53 @@
         cursor: pointer;
 
         &:before {
-          right: 40%;
+          right: 80%;
         }
       }
     }
   }
+
+  &_span {
+    background: $grey;
+    border-radius: 3px;
+    display: block;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.5s ease;
+    width: 33px;
+    z-index: 1;
+
+    &:first-child {
+      transform-origin: 0% 0%;
+    }
+
+    &:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+  }
+
+  &_buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// Hamburger Menu Animation Lines
+.menu__mobile input:checked ~ span {
+  background: $red;
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+}
+
+.menu__mobile input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg);
+}
+
+.menu__mobile input:checked ~ span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
 }
