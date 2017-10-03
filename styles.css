@@ -45,6 +45,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@keyframes main__right-slide-in___pYvfi {
+  100% {
+    right: -20px; } }
+
 * {
   box-sizing: border-box; }
 
@@ -132,7 +136,7 @@ sup {
   display: flex;
   height: 100px;
   justify-content: space-between;
-  padding: 0 20px 0 15px;
+  padding: 0 20px;
   position: fixed;
   width: 100%;
   z-index: 2; }
@@ -141,6 +145,10 @@ sup {
       padding: 0 50px; } }
   .Header__header__logo___1h52H {
     width: 100px; }
+@keyframes Nav__right-slide-in___1Q_uU {
+  100% {
+    right: -20px; } }
+
 .Nav__menu___3F1Nu {
   display: flex; }
   .Nav__menu__desktop___3wfTV {
@@ -184,6 +192,15 @@ sup {
   @media screen and (min-width: 770px) {
     .Nav__menu__mobile___18ABv {
       display: none; } }
+  .Nav__menu__mobile_label___2DlZI {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
   .Nav__menu__mobile_input___2g5Dp {
     cursor: pointer;
     display: block;
@@ -193,20 +210,16 @@ sup {
     width: 40px;
     z-index: 2; }
     .Nav__menu__mobile_input___2g5Dp:checked ~ ul {
-      opacity: 1;
-      transform: scale(1, 1); }
+      animation: Nav__right-slide-in___1Q_uU 0.5s forwards; }
   .Nav__menu__mobile_list___8aKX0 {
     background: #EDEDED;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    left: -300px;
+    right: -310px;
+    margin-top: 36px;
     padding: 50px;
     position: absolute;
-    margin: 36px 0 0 -50px;
-    transform: translate(-200%, 0);
-    transform-origin: 0% 0%;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     width: 290px; }
     .Nav__menu__mobile_list_item___iAvLw {
       color: #777;
@@ -235,16 +248,16 @@ sup {
     border-radius: 3px;
     display: block;
     height: 4px;
-    margin-bottom: 5px;
+    margin: 0 10px 5px 0;
     position: relative;
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.5s ease;
     width: 33px;
     z-index: 1; }
     .Nav__menu__mobile_span___3izNQ:first-child {
-      transform-origin: 0% 0%; }
+      transform-origin: left left; }
     .Nav__menu__mobile_span___3izNQ:nth-last-child(2) {
-      transform-origin: 0% 100%; }
+      transform-origin: left bottom; }
   .Nav__menu__mobile_buttons___2mmfr {
     align-items: center;
     display: flex;
@@ -257,7 +270,7 @@ sup {
 
 .Nav__menu__mobile___18ABv input:checked ~ span:nth-last-child(3) {
   opacity: 0;
-  transform: rotate(0deg); }
+  transform: rotate(0deg) translateX(5px); }
 
 .Nav__menu__mobile___18ABv input:checked ~ span:nth-last-child(2) {
   opacity: 1;
