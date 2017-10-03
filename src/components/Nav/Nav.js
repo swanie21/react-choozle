@@ -25,7 +25,7 @@ function Nav () {
       </div>
       <div className={ Styles.menu__mobile }>
         <input className={ Styles.menu__mobile_input } id='hamburgerMenu' type='checkbox' value='true' />
-        <label htmlFor='hamburgerMenu' value='true'></label>
+        <label className={ Styles.menu__mobile_label } htmlFor='hamburgerMenu' value='true'>menu</label>
         <span className={ Styles.menu__mobile_span }></span>
         <span className={ Styles.menu__mobile_span }></span>
         <span className={ Styles.menu__mobile_span }></span>

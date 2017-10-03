@@ -1,5 +1,6 @@
 @import '../../styles/_variables';
 @import '../../styles/_fonts';
+@import '../../styles/_animations';
 
 // Desktop Menu
 .menu {
@@ -62,6 +63,18 @@
     display: none;
   }
 
+  // hide label but still accessible to screen readers
+  &_label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
   &_input {
     cursor: pointer;
     display: block;
@@ -72,8 +85,7 @@
     z-index: 2;
 
     &:checked ~ ul {
-      opacity: 1;
-      transform: scale(1.0, 1.0);
+      animation: right-slide-in 0.5s forwards;
     }
   }
 
@@ -82,13 +94,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    left: -300px;
+    right: -310px;
+    margin-top: 36px;
     padding: 50px;
     position: absolute;
-    margin: 36px 0 0 -50px;
-    transform: translate(-100%, 0);
-    transform-origin: 0% 0%;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     width: 290px;
 
     &_item {
@@ -128,7 +137,7 @@
     border-radius: 3px;
     display: block;
     height: 4px;
-    margin-bottom: 5px;
+    margin: 0 10px 5px 0;
     position: relative;
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.5s ease;
@@ -136,11 +145,11 @@
     z-index: 1;
 
     &:first-child {
-      transform-origin: 0% 0%;
+      transform-origin: left left;
     }
 
     &:nth-last-child(2) {
-      transform-origin: 0% 100%;
+      transform-origin: left bottom;
     }
   }
 
@@ -160,7 +169,7 @@
 
 .menu__mobile input:checked ~ span:nth-last-child(3) {
   opacity: 0;
-  transform: rotate(0deg);
+  transform: rotate(0deg) translateX(5px);
 }
 
 .menu__mobile input:checked ~ span:nth-last-child(2) {
